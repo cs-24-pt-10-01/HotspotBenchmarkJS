@@ -6,9 +6,7 @@ cd ..
 # instrumenting
 node Using-acorn-to-decorate-JS/decorateFolder.js ./HotSpotBenchmarkJS
 
-cd HotSpotBenchmark
-npm install koffi # koffi required by rapl.js
+cd HotSpotBenchmarkJS
 
 # run
 node main.js
-
