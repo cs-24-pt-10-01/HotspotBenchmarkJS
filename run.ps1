@@ -11,9 +11,8 @@ cd ..
 # instrumenting
 node Using-acorn-to-decorate-JS/decorateFolder.js ./HotSpotBenchmarkJS
 
-
 # removing instrumentation tool
-remove-item Using-acorn-to-decorate-JS/ -recurse
+remove-item Using-acorn-to-decorate-JS/ -recurse -Force
 
 cd HotSpotBenchmarkJS
 
