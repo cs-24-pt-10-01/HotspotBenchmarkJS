@@ -4,8 +4,8 @@ const fs = require('fs');
 let toBeSorted = fs.readFileSync("ToBeSorted.json").toString();
 toBeSorted = toBeSorted.replace("[", "").replace("]", "").split(",").map(Number);
 
-const fibInput = 47;
-const nbodyInput = 500000;
+const fibInput = 10//47;
+const nbodyInput = 1000//500000;
 
 // Benchmarks
 const fib = require('./Fib.js').fib;
