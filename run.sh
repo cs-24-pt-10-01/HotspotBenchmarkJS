@@ -9,7 +9,7 @@ npm install package.json
 cd ..
 
 # instrumenting
-node ./Using-acorn-to-decorate-JS/decorateFolder.js ./HotspotBenchmarkJS
+node ./Using-acorn-to-decorate-JS/decorateFolder.js ./HotspotBenchmarkJS true
 
 # removing instrumentation tool
 rm -rf Using-acorn-to-decorate-JS
