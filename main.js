@@ -1,4 +1,4 @@
-const rapl = require('rapl');
+const rapl = require('./rapl.js');
 
 rapl.start("full");
 

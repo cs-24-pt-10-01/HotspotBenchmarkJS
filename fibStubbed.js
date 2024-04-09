@@ -1,4 +1,4 @@
-const rapl = require('rapl');
+const rapl = require('./rapl.js');
 
 function stubbed(input) {
     return 0;
@@ -22,7 +22,7 @@ const mergeSortInPlaceFast = require('./MergeSort.js').mergeSortInPlaceFast;
 const sort = require('./QuickSort.js').sort;
 
 // Running benchmarks
-const fibOutput = stubbed(fibInput);
+const fibOutput = stubbed(fibInput); // stubbed here
 const nbodyOutput = nbody(nbodyInput);
 const quickSortOutput = sort(toBeSorted, (a, b) => a < b);
 // MergeSort is in place
