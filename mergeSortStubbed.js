@@ -1,7 +1,7 @@
 const rapl = require('./rapl.js');
 
 function stubbed(input) {
-    return [];
+    return input;
 }
 
 rapl.start("mergeSortStubbed");
