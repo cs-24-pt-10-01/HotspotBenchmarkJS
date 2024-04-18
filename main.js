@@ -23,14 +23,14 @@ const sort = require('./QuickSort.js').sort;
 // Running benchmarks
 const fibOutput = fib(fibInput);
 const nbodyOutput = nbody(nbodyInput);
-const quickSortOutput = sort(quickSortInput, (a, b) => a < b);
-// MergeSort is in place
+// MergeSort and QuickSort are in place
+sort(quickSortInput, (a, b) => a < b);
 mergeSortInPlaceFast(mergeSortInput);
 
 // printing output
 console.log("fib : ", fibOutput);
 console.log("nbody : ", nbodyOutput);
 console.log("mergeSort : ", mergeSortInput);
-console.log("quickSort : ", quickSortOutput);
+console.log("quickSort : ", quickSortInput);
 
 rapl.stop("full");
