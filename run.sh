@@ -1,3 +1,5 @@
+npm install koffi
+
 for i in {1..10}
 do
     # running full version (no stubbing)
