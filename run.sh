@@ -16,5 +16,8 @@ rm -rf Using-acorn-to-decorate-JS
 
 cd ./HotspotBenchmarkJS
 
-# run
-node ./main.js
+# running 10 times
+for i in {1..10}
+do
+   node ./main.js
+done
