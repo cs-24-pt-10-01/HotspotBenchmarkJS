@@ -24,6 +24,7 @@ const sort = require('./QuickSort.js').sort;
 const fibOutput = fib(fibInput);
 const nbodyOutput = nbody(nbodyInput);
 // MergeSort and QuickSort are in place
+// quickSort and mergeSort are in place
 sort(quickSortInput, (a, b) => a < b);
 mergeSortInPlaceFast(mergeSortInput);
 
