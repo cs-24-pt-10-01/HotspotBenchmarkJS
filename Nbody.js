@@ -1,3 +1,5 @@
+const { workerData } = require("worker_threads");
+
 // test method (TODO remove optimisation stoppers?)
 function N_Body(n) {
     /* The Computer Language Benchmarks Game
@@ -175,4 +177,5 @@ function N_Body(n) {
     return energy2;
 }
 
-module.exports.N_Body = N_Body;
+console.log("N-body workerdata: " + workerData);
+N_Body(workerData);
