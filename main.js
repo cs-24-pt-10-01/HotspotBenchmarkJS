@@ -1,16 +1,7 @@
 const fs = require('fs');
 const { Worker } = require('worker_threads');
 
-// Function to read input from file
-function readInputFromFile(fileName) {
-    let input = fs.readFileSync(fileName).toString();
-    return input.replace("[", "").replace("]", "").split(",").map(Number);
-}
-
-const mergeSortInput = readInputFromFile("ToBeSorted.json");
-const quickSortInput = readInputFromFile("ToBeSorted.json");
 const fibInput = 47;
-const nbodyInput = 50000000;
 
 // Running benchmarks using workers
 const fibWorker = new Worker('./Fib.js', { workerData: fibInput });
