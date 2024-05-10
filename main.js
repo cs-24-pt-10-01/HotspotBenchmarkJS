@@ -1,7 +1,14 @@
 const fs = require('fs');
 const { Worker } = require('worker_threads');
 
+let mergeSortInput = fs.readFileSync("ToBeSorted.json").toString();
+mergeSortInput = mergeSortInput.replace("[", "").replace("]", "").split(",").map(Number);
+
+let quickSortInput = fs.readFileSync("ToBeSorted.json").toString();
+quickSortInput = quickSortInput.replace("[", "").replace("]", "").split(",").map(Number);
+
 const fibInput = 47;
+const nbodyInput = 50000000;
 
 // Running benchmarks using workers
 const fibWorker = new Worker('./Fib.js', { workerData: fibInput });
