@@ -9,7 +9,7 @@ let quickSortInput = fs.readFileSync("ToBeSorted.json").toString();
 quickSortInput = quickSortInput.replace("[", "").replace("]", "").split(",").map(Number);
 
 const fibInput = 47;
-const nbodyInput = 50000000;
+const nbodyInput = 250000000;
 
 // Running benchmarks using workers
 const fibWorker = new Worker('./Fib.js', { workerData: fibInput });
