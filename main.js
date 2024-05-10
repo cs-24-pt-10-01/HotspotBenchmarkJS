@@ -1,30 +1,46 @@
 const fs = require('fs');
+const { Worker } = require('worker_threads');
 
-// Inputs
-let mergeSortInput = fs.readFileSync("ToBeSorted.json").toString();
-mergeSortInput = mergeSortInput.replace("[", "").replace("]", "").split(",").map(Number);
+// Function to read input from file
+function readInputFromFile(fileName) {
+    let input = fs.readFileSync(fileName).toString();
+    return input.replace("[", "").replace("]", "").split(",").map(Number);
+}
 
-let quickSortInput = fs.readFileSync("ToBeSorted.json").toString();
-quickSortInput = quickSortInput.replace("[", "").replace("]", "").split(",").map(Number);
-
+const mergeSortInput = readInputFromFile("ToBeSorted.json");
+const quickSortInput = readInputFromFile("ToBeSorted.json");
 const fibInput = 47;
 const nbodyInput = 50000000;
 
-// Benchmarks
-const fib = require('./Fib.js').fib;
-const nbody = require('./Nbody.js').N_Body;
-const mergeSortInPlaceFast = require('./MergeSort.js').mergeSortInPlaceFast;
-const sort = require('./QuickSort.js').sort;
+// Running benchmarks using workers
+const fibWorker = new Worker('./Fib.js', { workerData: fibInput });
+//const nbodyWorker = new Worker('./Nbody.js', { workerData: nbodyInput });
+//const mergeSortWorker = new Worker('./MergeSort.js', { workerData: mergeSortInput });
+//const quickSortWorker = new Worker('./QuickSort.js', { workerData: quickSortInput });
 
-// Running benchmarks
-const fibOutput = fib(fibInput);
-const nbodyOutput = nbody(nbodyInput);
-// quickSort and mergeSort are in place
-sort(quickSortInput, (a, b) => a < b);
-mergeSortInPlaceFast(mergeSortInput);
+// Listening for messages from workers
+fibWorker.once('message', fibOutput => {
+    console.log("fib : ", fibOutput);
+});
 
-// printing output
-console.log("fib : ", fibOutput);
-console.log("nbody : ", nbodyOutput);
-console.log("mergeSort : ", mergeSortInput);
-console.log("quickSort : ", quickSortInput);
+/*
+nbodyWorker.once('message', nbodyOutput => {
+    console.log("nbody : ", nbodyOutput);
+});
+
+mergeSortWorker.once('message', mergeSortOutput => {
+    console.log("mergeSort : ", mergeSortOutput);
+});
+
+quickSortWorker.once('message', quickSortOutput => {
+    console.log("quickSort : ", quickSortOutput);
+});
+*/
+
+// Waiting for workers to finish
+fibWorker.on('exit', () => {
+    console.log("fib worker has finished");
+});
+
+// Infinite loop to keep the main thread alive
+setInterval(() => { }, 1000);
