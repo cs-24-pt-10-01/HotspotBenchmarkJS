@@ -14,5 +14,5 @@ const nbodyInput = 50000000;
 // Running benchmarks using workers
 const fibWorker = new Worker('./Fib.js', { workerData: fibInput });
 const nbodyWorker = new Worker('./Nbody.js', { workerData: nbodyInput });
-const mergeSortWorker = new Worker('./MergeSort.js', { workerData: mergeSortInput });
 const quickSortWorker = new Worker('./QuickSort.js', { workerData: quickSortInput });
+const mergeSortWorker = new Worker('./MergeSort.js', { workerData: mergeSortInput });
