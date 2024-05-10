@@ -1,6 +1,7 @@
 const fs = require('fs');
 const { Worker } = require('worker_threads');
 
+// Inputs
 let mergeSortInput = fs.readFileSync("ToBeSorted.json").toString();
 mergeSortInput = mergeSortInput.replace("[", "").replace("]", "").split(",").map(Number);
 
