@@ -1,3 +1,5 @@
+const { workerData } = require("worker_threads");
+
 // test method from Rosetta Code
 function mergeSortInPlaceFast(v) {
     sort(v, 0, v.length, v.slice());
@@ -24,4 +26,5 @@ function mergeSortInPlaceFast(v) {
     }
 }
 
-module.exports.mergeSortInPlaceFast = mergeSortInPlaceFast;
+console.log("MergeSort workerdata length: " + workerData.length);
+mergeSortInPlaceFast(workerData);
