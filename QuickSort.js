@@ -1,3 +1,5 @@
+const { workerData } = require("worker_threads");
+
 // test method from Rosetta Code
 function sort(array, less) {
 
@@ -38,4 +40,5 @@ function sort(array, less) {
   return array;
 }
 
-module.exports.sort = sort;
+console.log("QuickSort workerdata length: " + workerData.length);
+sort(workerData, (a, b) => a < b);
