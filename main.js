@@ -34,4 +34,4 @@ fibWorker.on('exit', () => {
 });
 
 // Infinite loop to keep the main thread alive
-setInterval(() => { }, 1000);
+//setInterval(() => { }, 1000);
