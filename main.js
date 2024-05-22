@@ -26,5 +26,5 @@ mergeSortInPlaceFast(mergeSortInput);
 // printing output
 //console.log("fib : ", fibOutput);
 //console.log("nbody : ", nbodyOutput);
-//console.log("mergeSort : ", mergeSortInput);
-console.log("quickSort : ", quickSortInput);
+console.log("mergeSort : ", mergeSortInput);
+//console.log("quickSort : ", quickSortInput);
