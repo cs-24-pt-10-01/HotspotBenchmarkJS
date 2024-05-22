@@ -2,7 +2,7 @@
 function mergeSortInPlaceFast(v) {
 
     let i = 0;
-    let length = 20000; //How many times to create a deep clone (30000 was tested to be slower than fib(47))
+    let length = 25000; //How many times to create a deep clone (30000 was tested to be slower than fib(47))
     let copy = [];
 
     while (i < length) {
