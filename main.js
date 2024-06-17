@@ -12,6 +12,7 @@ const fibInput = 47;
 const nbodyInput = 50000000;
 const sieveInput = 100000;
 const hailstoneInput = 100000;
+const nqueenInput = 10;
 
 // Benchmarks
 const fib = require('./Fib.js').fib;
@@ -20,6 +21,7 @@ const mergeSortInPlaceFast = require('./MergeSort.js').mergeSortInPlaceFast;
 const sort = require('./QuickSort.js').sort;
 const eratosthenes = require('./sieve-of-eratosthenes-2.js').eratosthenes;
 const hailstone = require('./Hailstone-Sequence.js').LongestSequenceHailstone;
+const nqueen = require('./N-Queens.js').queenPuzzle;
 
 // Running benchmarks
 const fibOutput = fib(fibInput);
@@ -28,7 +30,8 @@ const nbodyOutput = nbody(nbodyInput);
 sort(quickSortInput, (a, b) => a < b);
 mergeSortInPlaceFast(mergeSortInput);
 const sieveOutput = eratosthenes(sieveInput);
-const hailstoneOutput = LongestSequenceHailstone(hailstoneInput);
+const hailstoneOutput = hailstone(hailstoneInput);
+const nqueenOutput = nqueen(nqueenInput, nqueenInput); //N-Queen requires a grid size as input. 'N x N' is used here but 'N x M' can also be used.
 
 // printing output
 console.log("fib : ", fibOutput);
@@ -37,3 +40,4 @@ console.log("mergeSort : ", mergeSortInput);
 console.log("quickSort : ", quickSortInput);
 console.log("sieve : ", sieveOutput);
 console.log("hailstone : ", hailstoneOutput);
+console.log("nqueen : ", nqueenOutput);
