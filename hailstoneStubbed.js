@@ -1,5 +1,9 @@
 const fs = require('fs');
 
+function stubbed(input){
+    return 0;
+}
+
 // Inputs
 let mergeSortInput = fs.readFileSync("ToBeSorted.json").toString();
 mergeSortInput = mergeSortInput.replace("[", "").replace("]", "").split(",").map(Number);
@@ -31,7 +35,7 @@ const nbodyOutput = nbody(nbodyInput);
 sort(quickSortInput, (a, b) => a < b);
 mergeSortInPlaceFast(mergeSortInput);
 const sieveOutput = eratosthenes(sieveInput);
-const hailstoneOutput = hailstone(hailstoneInput);
+const hailstoneOutput = stubbed(hailstoneInput);
 const nqueenOutput = nqueen(nqueenInput, nqueenInput); //N-Queen requires a grid size as input. 'N x N' is used here but 'N x M' can also be used.
 const spectralOutput = spectral(spectralInput);
 
