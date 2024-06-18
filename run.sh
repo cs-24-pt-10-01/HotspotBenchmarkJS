@@ -10,4 +10,8 @@ do
     node ./mergeSortStubbed.js
     node ./nbodyStubbed.js
     node ./quickSortStubbed.js
+    node ./spectralNormStubbed.js
+    node ./sieveStubbed.js
+    node ./nQueensStubbed.js
+    node ./hailstoneStubbed.js
 done
