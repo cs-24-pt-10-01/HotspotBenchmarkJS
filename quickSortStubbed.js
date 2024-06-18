@@ -32,7 +32,6 @@ const hailstone = require('./Hailstone-Sequence.js').LongestSequenceHailstone;
 const nqueen = require('./N-Queens.js').queenPuzzle;
 const spectral = require('./Spectral-norm.js').mainThread;
 
-
 // Running benchmarks
 const fibOutput = fib(fibInput);
 const nbodyOutput = nbody(nbodyInput);
@@ -44,7 +43,6 @@ const hailstoneOutput = hailstone(hailstoneInput);
 const nqueenOutput = nqueen(nqueenInput, nqueenInput); //N-Queen requires a grid size as input. 'N x N' is used here but 'N x M' can also be used.
 const spectralOutput = spectral(spectralInput);
 
-
 // printing output
 console.log("fib : ", fibOutput);
 console.log("nbody : ", nbodyOutput);
@@ -54,6 +52,5 @@ console.log("sieve : ", sieveOutput);
 console.log("hailstone : ", hailstoneOutput);
 console.log("nqueen : ", nqueenOutput);
 console.log("spectral : ", spectralOutput);
-
 
 rapl.stop("quickSortStubbed");
