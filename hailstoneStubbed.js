@@ -28,7 +28,7 @@ const nbody = require('./Nbody.js').N_Body;
 const mergeSortInPlaceFast = require('./MergeSort.js').mergeSortInPlaceFast;
 const sort = require('./QuickSort.js').sort;
 const eratosthenes = require('./sieve-of-eratosthenes-2.js').eratosthenes;
-const hailstone = require('./Hailstone-Sequence.js').LongestSequenceHailstone;
+//const hailstone = require('./Hailstone-Sequence.js').LongestSequenceHailstone;
 const nqueen = require('./N-Queens.js').queenPuzzle;
 const spectral = require('./Spectral-norm.js').mainThread;
 
