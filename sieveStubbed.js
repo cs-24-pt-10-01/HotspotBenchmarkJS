@@ -1,8 +1,12 @@
+const rapl = require('./rapl.js');
+
 const fs = require('fs');
 
-function stubbed(stubbed){
+function stubbed(stubbed) {
     return [];
 }
+
+rapl.start("Sieve of Eratosthenes stubbed");
 
 // Inputs
 let mergeSortInput = fs.readFileSync("ToBeSorted.json").toString();
@@ -23,7 +27,7 @@ const fib = require('./Fib.js').fib;
 const nbody = require('./Nbody.js').N_Body;
 const mergeSortInPlaceFast = require('./MergeSort.js').mergeSortInPlaceFast;
 const sort = require('./QuickSort.js').sort;
-const eratosthenes = require('./sieve-of-eratosthenes-2.js').eratosthenes;
+//const eratosthenes = require('./sieve-of-eratosthenes-2.js').eratosthenes;
 const hailstone = require('./Hailstone-Sequence.js').LongestSequenceHailstone;
 const nqueen = require('./N-Queens.js').queenPuzzle;
 const spectral = require('./Spectral-norm.js').mainThread;
@@ -48,3 +52,5 @@ console.log("sieve : ", sieveOutput);
 console.log("hailstone : ", hailstoneOutput);
 console.log("nqueen : ", nqueenOutput);
 console.log("spectral : ", spectralOutput);
+
+rapl.stop("Sieve of Eratosthenes stubbed");

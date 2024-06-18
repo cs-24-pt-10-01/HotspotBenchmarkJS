@@ -1,8 +1,12 @@
+const rapl = require('./rapl.js');
+
 const fs = require('fs');
 
-function stubbed(input1, input2){
+function stubbed(input1, input2) {
     return [[]];
 }
+
+rapl.start("N-Queens stubbed");
 
 // Inputs
 let mergeSortInput = fs.readFileSync("ToBeSorted.json").toString();
@@ -48,3 +52,5 @@ console.log("sieve : ", sieveOutput);
 console.log("hailstone : ", hailstoneOutput);
 console.log("nqueen : ", nqueenOutput);
 console.log("spectral : ", spectralOutput);
+
+rapl.stop("N-Queens stubbed");

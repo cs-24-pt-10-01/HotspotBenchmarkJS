@@ -1,8 +1,12 @@
+const rapl = require('./rapl.js');
+
 const fs = require('fs');
 
-function stubbed(input){
+function stubbed(input) {
     return 0;
 }
+
+rapl.start("Spectral Norm stubbed");
 
 // Inputs
 let mergeSortInput = fs.readFileSync("ToBeSorted.json").toString();
@@ -26,7 +30,7 @@ const sort = require('./QuickSort.js').sort;
 const eratosthenes = require('./sieve-of-eratosthenes-2.js').eratosthenes;
 const hailstone = require('./Hailstone-Sequence.js').LongestSequenceHailstone;
 const nqueen = require('./N-Queens.js').queenPuzzle;
-const spectral = require('./Spectral-norm.js').mainThread;
+//const spectral = require('./Spectral-norm.js').mainThread;
 
 // Running benchmarks
 const fibOutput = fib(fibInput);
@@ -48,3 +52,5 @@ console.log("sieve : ", sieveOutput);
 console.log("hailstone : ", hailstoneOutput);
 console.log("nqueen : ", nqueenOutput);
 console.log("spectral : ", spectralOutput);
+
+rapl.stop("Spectral Norm stubbed");
