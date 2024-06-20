@@ -36,7 +36,7 @@ sort(quickSortInput, (a, b) => a < b);
 mergeSortInPlaceFast(mergeSortInput);
 const sieveOutput = eratosthenes(sieveInput);
 const hailstoneOutput = hailstone(hailstoneInput);
-const nqueenOutput = stubbed(nqueenInput, nqueenInput); //N-Queen requires a grid size as input. 'N x N' is used here but 'N x M' can also be used.
+const nqueenOutput = stubbed(nqueenInput, nqueenInput); //N-Queen requires a grid size as input.
 const spectralOutput = spectral(spectralInput);
 
 // printing output
