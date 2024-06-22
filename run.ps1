@@ -17,4 +17,7 @@ remove-item Using-acorn-to-decorate-JS/ -recurse -Force
 cd HotspotBenchmarkJS
 
 # run
-node main.js
+for ($i = 0; $i -le 5; $i++)
+{
+    node main.js    
+}

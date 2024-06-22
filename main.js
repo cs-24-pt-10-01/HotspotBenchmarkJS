@@ -7,7 +7,7 @@ mergeSortInput = mergeSortInput.replace("[", "").replace("]", "").split(",").map
 let quickSortInput = fs.readFileSync("ToBeSorted.json").toString();
 quickSortInput = quickSortInput.replace("[", "").replace("]", "").split(",").map(Number);
 
-const fibInput = 47;
+const fibInput = 20;
 const nbodyInput = 50000000;
 
 // Benchmarks
